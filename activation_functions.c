@@ -1,7 +1,6 @@
 #include <math.h>
 #include "activation_functions.h"
-/////////////// FONCTIONS D'ACTIVATION AVEC LEURS DÉRIVÉ RESPECTIF //////////////
-/////Fonctions d'activation
+
 float sigmoid(float s){
 	return 1 / (1 + exp(-s));
 }
