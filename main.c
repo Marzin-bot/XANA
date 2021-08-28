@@ -8,8 +8,6 @@
 ////////////////////////////////////////////////////////
 
 
-//     ### INTELIGENCE ARTIFICIEL MULTI AJENT ###     //
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,8 +33,8 @@ float difference_prime(float x, float y){
 }
 
 
-//donne des résulta toujours positif
-//La différence est mise au carré afin que nous mesurions la valeur absolue de la différence.
+
+//La différence est mise au carré afin que nous mesurons la valeur absolue de la différence.
 float sum_of_sqaures_error(float x, float y){
 	return powf(x - y, 2);
 }
@@ -82,7 +80,7 @@ float reponses[8] = {1, 0, 0, 0, 0, 1, 1, 0};
 
 /////////////INPUT TEST////////////
 
-//Données d'input de test, une fois que le réseau a fini d'aprendre
+//Données d'input de test, une fois que le réseau a fini d'apprendre
 float input_test[5][INPUT_HEIGHT] = {
 	{0, 0, 1, 1},
 	{1, 0, 0, 1},
@@ -99,7 +97,7 @@ float *forward_propagate(float input_layer_values[]){
 		//boucle qui parcour les neurones dans le layer
 		unsigned int y;
 		for (y = 0; y < NETWORK_MAP[x]; y++){
-			//on refille les valeur dentré au neurone
+			//on refille les valeurs dentré aux neurones.
 
 			network[x][y].value_axone = 0;
 			
@@ -188,7 +186,7 @@ int main(int argc, char *argv[]){
 	}
 	
 	
-	//Une foi le réseu inisialiser il faut lui faire passer la phase d'entrainement
+	//Une foi le réseu inisialisé il faut lui faire passer la phase d'entrainement
 	int i;
 	for(i = 0; i < nombre_iteration_apprentissage; i++){
 		float output_layer_values = forward_propagate(inputs[i % 6])[0];
