@@ -5,7 +5,7 @@ float sigmoid(float s){
 	return 1 / (1 + exp(-s));
 }
 
-//dériver de la sigmoide
+
 float sigmoidPrime(float s){
 	return s * (1 - s);
 }
